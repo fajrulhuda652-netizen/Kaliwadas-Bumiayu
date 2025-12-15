@@ -1,0 +1,751 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* WARNA UTAMA */
+:root {
+    --primary-color: #007bff; /* Biru */
+    --secondary-color: #28a745; /* Hijau */
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #fff;
+    --bg-dark: #2c3e50; /* Biru Tua */
+}
+
+/* HEADER */
+.main-header {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* CTA BUTTONS */
+.cta-primary, .cta-secondary {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+.cta-primary:hover {
+    background-color: #218838; /* Hijau lebih gelap */
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    margin-left: 10px;
+}
+
+.cta-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+
+/* HERO SECTION */
+.hero-section {
+    background-color: var(--bg-light);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--bg-dark);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FEATURE SECTION */
+.features-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+.features-section h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.feature-item .icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* TESTIMONIALS */
+.testimonial-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.testimonial-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.client-name {
+    font-weight: 700;
+    color: #666;
+}
+
+/* FINAL CTA */
+.final-cta {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.final-cta h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.final-cta .cta-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.final-cta .cta-primary:hover {
+    background-color: #218838;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: var(--bg-dark);
+    color: #bbb;
+    padding: 40px 0;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-col h3 {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: right;
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+.map-section {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+
+.map-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+#map-container {
+    width: 100%;
+    height: 400px; /* Tinggi Peta */
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+
+#map-container iframe {
+    /* Pastikan iframe mengambil 100% dari wadahnya */
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+/* Penyesuaian Footer agar tidak terlalu berdempetan dengan Map Section */
+.main-footer {
+    border-top: 1px solid #ddd;
+}
+/* GAYA UNTUK HALAMAN LOKASI/PETA (lokasi.html) */
+
+.page-content {
+    padding: 80px 0;
+    min-height: 60vh; /* Agar konten tidak terlalu pendek */
+}
+
+.map-page h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.map-page .subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.map-container-full {
+    width: 100%;
+    /* Tinggi diatur di iframe, tapi kita tambahkan border-radius untuk estetika */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container-full iframe {
+    display: block;
+}
+
+.contact-info-detail {
+    padding: 30px 0;
+}
+
+.contact-info-detail h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.contact-grid h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.contact-grid p {
+    margin-bottom: 5px;
+}
+
+/* Responsiveness dasar untuk halaman peta */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Tumpuk kolom di perangkat kecil */
+        text-align: center;
+    }
+}
+/* --- GAYA TAMBAHAN UNTUK TENTANG KAMI & LAYANAN --- */
+
+.page-content {
+    padding: 80px 0;
+    min-height: 70vh;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: var(--bg-dark);
+}
+
+.lead-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TENTANG KAMI (ABOUT-PAGE) */
+.mission-vision {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.card-item {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--bg-light);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-item h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card-item ul {
+    margin-left: 20px;
+}
+
+.team-snippet {
+    text-align: center;
+    padding: 30px;
+    background-color: #f0f4f7;
+    border-radius: 8px;
+}
+.team-snippet h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+
+/* LAYANAN (SERVICES-PAGE) */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.detail-card {
+    padding: 25px;
+    background-color: var(--bg-light);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+
+.detail-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.detail-card p {
+    margin-bottom: 20px;
+}
+
+/* Responsiveness Dasar untuk tablet/mobile */
+@media (max-width: 768px) {
+    .mission-vision, .service-list {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+}
+/* HERO SECTION */
+.hero-section {
+    /* Properti untuk menjadikan Tug Suci sebagai latar belakang */
+    background-image: url('bumiayu.jpg'); /* Ganti path jika foto tidak di root folder */
+    background-size: cover; /* PASTIKAN GAMBAR MENUTUPI SELURUH AREA HERO */
+    background-position: center center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    
+    /* Tambahkan tinggi minimum agar hero terlihat jelas, karena tidak ada img di dalamnya */
+    min-height: 450px; 
+    
+    padding: 100px 0; /* Pertahankan padding untuk konten */
+    text-align: center;
+    
+    /* Ganti background-color dengan overlay jika perlu */
+    /* background-color: var(--bg-light); <-- Hapus atau ganti dengan warna overlay */
+}
+
+/* Tambahkan lapisan (overlay) gelap agar teks mudah dibaca */
+.hero-section .container {
+    /* Anda bisa menambahkan pseudo-element di CSS untuk overlay,
+       atau memberikan warna pada teks agar kontras */
+    position: relative;
+    z-index: 2; /* Pastikan konten di atas latar belakang */
+}
+
+/* Buat Teks Kontras */
+.hero-section h1, 
+.hero-section p {
+    color: var(--text-light); /* Ubah teks menjadi putih atau warna cerah */
+    /* Tambahkan bayangan teks agar lebih mudah dibaca di atas gambar */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
+}
+/* Gaya Dasar Body dan Container */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px; /* Lebar maksimum konten */
+    margin: 0 auto; /* Tengah secara horizontal */
+    padding: 0 20px;
+}
+
+/* Gaya Navbar Utama */
+.navbar-layanan {
+    background-color: #004d40; /* Warna hijau tua khas desa */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-layanan .container {
+    display: flex;
+    justify-content: space-between; /* Pisahkan logo dan menu */
+    align-items: center;
+}
+
+/* Gaya Logo Desa */
+.logo-desa {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Gaya Daftar Link */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Link disusun horizontal */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+/* Efek Hover */
+.nav-links li a:hover {
+    background-color: #00796b; /* Warna hijau sedikit lebih terang saat di-hover */
+}
+
+/* Penekanan untuk link Beranda */
+.nav-links .link-utama a {
+    background-color: #d32f2f; /* Warna merah agar menonjol */
+}
+.nav-links .link-utama a:hover {
+    background-color: #e53935;
+}
+
+/* Gaya Tombol Mobile (Sembunyikan di desktop) */
+.nav-toggle {
+    display: none;
+}
+
+/* Media Queries untuk Tampilan Mobile (Opsional) */
+@media (max-width: 768px) {
+    .nav-links {
+        /* Sembunyikan link secara default di mobile */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi navbar */
+        left: 0;
+        background-color: #004d40;
+        z-index: 10;
+        padding: 10px 0;
+    }
+    
+    .nav-links li {
+        margin: 0;
+        border-top: 1px solid #00695c;
+    }
+
+    .nav-links li a {
+        padding: 15px 20px;
+    }
+
+    /* Tampilkan tombol mobile */
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    /* Anda perlu JavaScript untuk menampilkan/menyembunyikan .nav-links saat .nav-toggle diklik */
+    /* Contoh: .nav-links.active { display: flex; } */
+}
+/* ========================================================== */
+/* GAYA BARU: INFORMASI DESA KALIWADAS */
+/* ========================================================== */
+.info-desa-kaliwadas {
+    padding: 80px 0;
+    background-color: var(--bg-light); /* Latar belakang putih */
+}
+
+.info-desa-kaliwadas h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--bg-dark); /* Biru Tua/Gelap */
+    margin-bottom: 50px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Bagian Teks lebih besar dari Statistik */
+    gap: 50px;
+    align-items: start;
+}
+
+.info-text p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.cta-tertiary {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.cta-tertiary:hover {
+    color: var(--secondary-color);
+}
+
+.info-stats {
+    background-color: #f4f7f6; /* Latar belakang abu-abu muda */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-stats h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.info-stats ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-stats ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: var(--text-dark);
+}
+
+.info-stats ul li i {
+    margin-right: 10px;
+    color: var(--secondary-color); /* Ikon warna Hijau */
+}
+
+/* ========================================================== */
+/* GAYA BARU: POTENSI UNGGULAN */
+/* ========================================================== */
+.potensi-unggulan {
+    padding: 60px 0;
+    background-color: #e9ecef; /* Sama seperti features-section */
+    text-align: center;
+}
+
+.potensi-unggulan h2 {
+    font-size: 2.2em;
+    color: var(--bg-dark);
+    margin-bottom: 40px;
+}
+
+.potensi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.potensi-item {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.potensi-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon-potensi {
+    font-size: 3em;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.potensi-item h3 {
+    color: var(--bg-dark);
+    margin-bottom: 10px;
+}
+
+/* ========================================================== */
+/* RESPONSIF UNTUK BAGIAN BARU */
+/* ========================================================== */
+@media (max-width: 992px) {
+    .info-grid {
+        grid-template-columns: 1fr; /* Tumpuk di tablet */
+    }
+    .potensi-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .potensi-grid {
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+}

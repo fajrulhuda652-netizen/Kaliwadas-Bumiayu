@@ -1,0 +1,1 @@
+var json_pemerintahan_13 = {"type":"FeatureCollection","name":"pemerintahan_13","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","RT/RW":null,"Balai Desa":"Balai desa kaliwadas"},"geometry":{"type":"Point","coordinates":[108.984035986274009,-7.262923100073282]}}]}
